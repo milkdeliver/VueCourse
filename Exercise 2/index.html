@@ -1,0 +1,72 @@
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+<div id="exercise">
+    <!-- 1) Show an alert when the Button gets clicked -->
+    <div>
+        <button v-on:click="alert">Show Alert</button>
+    </div>
+    <!-- 2) Listen to the "keydown" event and store the value in a data property (hint: event.target.value gives you the value) -->
+    <div>
+        <input v-on:keyup="changeValueListenToKeydown" type="text">
+        <p>{{ value }}</p>
+    </div>
+    <!-- 3) Adjust the example from 2) to only fire if the "key down" is the ENTER key -->
+    <div>
+        <input v-on:keyup.down="changeValueWhenKeydown" type="text">
+        <p>{{ value }}</p>
+    </div>
+
+    <!-- =========================Solution From  Teacher================================= -->
+    <!-- 2) Listen to the "keydown" event and store the value in a data property (hint: event.target.value gives you the value) -->
+    <div>
+        <input type="text" v-on:keydown="value = $event.target.value">
+        <p>{{ value }}</p>
+    </div>
+    <!-- 3) Adjust the example from 2) to only fire if the "key down" is the ENTER key -->
+    <div>
+        <input type="text" v-on:keydown.enter="value = $event.target.value">
+        <p>{{ value }}</p>
+    </div>
+
+    <div>
+        <input type="text" v-on:keypress="value = $event.target.value">
+        <p>{{ value }}</p>
+    </div>
+
+    <div>
+        <input type="text" v-on:keyup.delete="value = $event.target.value">
+        <p>{{ value }}</p>
+    </div>
+
+    <div>
+        <input type="text" v-on:copy="value = $event.target.value">
+        <p>{{ value }}</p>
+    </div>
+
+</div>
+
+<script>
+    new Vue({
+        el: '#exercise',
+        data: {
+             value: ''
+        },
+        methods: {
+            alert: function(){
+                alert("Hello!");
+            },
+
+            changeValueListenToKeydown: function(){
+                // console.log(event);
+                if(event.keyCode === 40 ){
+                    this.value = event.target.value;
+                }
+            },
+
+            changeValueWhenKeydown: function(){
+                this.value = event.target.value;
+            }
+        }
+    })
+
+</script>
