@@ -19,26 +19,31 @@
     <!-- =========================Solution From  Teacher================================= -->
     <!-- 2) Listen to the "keydown" event and store the value in a data property (hint: event.target.value gives you the value) -->
     <div>
+        <p> Key Down </p>
         <input type="text" v-on:keydown="value = $event.target.value">
         <p>{{ value }}</p>
     </div>
     <!-- 3) Adjust the example from 2) to only fire if the "key down" is the ENTER key -->
     <div>
+        <p> Key Down Enter </p>
         <input type="text" v-on:keydown.enter="value = $event.target.value">
         <p>{{ value }}</p>
     </div>
 
     <div>
+        <p> Key Press </p>
         <input type="text" v-on:keypress="value = $event.target.value">
         <p>{{ value }}</p>
     </div>
 
     <div>
+        <p> Key Up Delete </p>
         <input type="text" v-on:keyup.delete="value = $event.target.value">
         <p>{{ value }}</p>
     </div>
 
     <div>
+        <p> Copy </p>
         <input type="text" v-on:copy="value = $event.target.value">
         <p>{{ value }}</p>
     </div>
