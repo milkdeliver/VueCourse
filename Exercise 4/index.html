@@ -8,29 +8,36 @@
     <button @click="startEffect">Start Effect</button>
     <div id="effect" :class="{ highlight: isEffect, shrink: !isEffect }"></div>
   </div>
+
   <!-- 2) Create a couple of CSS classes and attach them via the array syntax -->
   <div :class="[redClass, fontClass]">I got classes :)</div>
+
   <!-- 3) Let the user enter a class (create some example classes) and attach it -->
   <div>
     <input v-model="classValue">
     <div :class="classValue"></div>
   </div>
+
   <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
   <div>
-    <input type="text">
-    <input type="text">
-    <div></div>
+    <input v-model="classValue2">
+    <input v-model="enableFlag">
+    <div  :class="[classValue2, enableFlag ? 'blackClass' : '']"></div>
   </div>
+
   <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  -->
   <div>
-    <input type="text">
-    <div></div>
+    <input v-model="styleValue">
+    <div style="width:100px; height:100px" :style="{ 'background-color': styleValue }"></div>
   </div>
+
   <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
   <div>
-    <!-- <button v-on:click="startProgress">Start Progress</button> -->
-    <div></div>
+    <button v-on:click="startProgress">Start Progress</button>
+    <div :style="progressbar"></div>
   </div>
 </div>
+
+<!-- Teacher Solution: https://jsfiddle.net/smax/jhj8cqdm/ -->
 
 <script src="app.js"></script>
