@@ -19,3 +19,15 @@ Official Docs - Class and Style Binding: http://vuejs.org/guide/class-and-style.
 Event compatibility tables : https://www.quirksmode.org/dom/events/index.html  
 Modifier : https://vuejs.org/v2/guide/events.html#Event-Modifiers  
 Key Modifiers: https://vuejs.org/v2/guide/events.html#Key-Modifiers  
+
+
+Module Resources & Useful Links  
+第 45 讲座第 3 节  
+JSFiddle:  
+
+Conditionals (v-if and v-show): https://jsfiddle.net/smax/hoc719j5/  
+Lists: https://jsfiddle.net/smax/o7uy2g0u/  
+Useful Links:  
+
+Official Docs - Conditionals: http://vuejs.org/guide/conditional.html  
+Official Docs - Lists: http://vuejs.org/guide/list.html  
