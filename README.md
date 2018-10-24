@@ -31,3 +31,13 @@ Useful Links:
 
 Official Docs - Conditionals: http://vuejs.org/guide/conditional.html  
 Official Docs - Lists: http://vuejs.org/guide/list.html  
+
+
+Module Resources & Useful Links  
+第 77 讲座第 5 节  
+JSFiddle:    
+The Vue Instance Code: https://jsfiddle.net/smax/9a2k6cja/2/  
+The VueJS Instance Lifecycle: https://jsfiddle.net/smax/jcgw7ak8/  
+
+Useful Links:  
+Official Docs - The Vue Instance: http://vuejs.org/guide/instance.html
